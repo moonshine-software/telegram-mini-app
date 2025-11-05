@@ -1,0 +1,50 @@
+{
+    "name": "moonshine/telegram-mini-app",
+    "description": "MoonShine Telegram MiniApp integration",
+    "keywords": [
+        "laravel",
+        "telegram",
+        "miniapp",
+        "admin",
+        "dashboard",
+        "moonshine"
+    ],
+    "type": "library",
+    "homepage": "https://getmoonshine.app",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/moonshine-software/telegram-mini-app/issues",
+        "source": "https://github.com/moonshine-software/telegram-mini-app"
+    },
+    "authors": [
+        {
+            "name": "Danil Shutsky",
+            "email": "info@cutcode.dev",
+            "homepage": "https://cutcode.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MoonShine\\TlgMiniApp\\": "src/"
+        }
+    },
+    "conflict": {
+        "laravel/framework": "<10.48.0",
+        "moonshine/moonshine": "<3.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MoonShine\\TlgMiniApp\\Providers\\TlgMiniAppServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {}
+    }
+}
