@@ -10,7 +10,7 @@ if (isTMA()) {
 
     axios.post(url, {}, {
         headers: {
-            Authorization: `tma ${retrieveRawInitData()}`,
+            'X-Authorization': `tma ${retrieveRawInitData()}`,
             'X-CSRF-TOKEN': token
         },
     })

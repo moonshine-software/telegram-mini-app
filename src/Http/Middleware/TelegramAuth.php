@@ -25,7 +25,7 @@ class TelegramAuth
             return $next($request);
         }
 
-        $header = $request->header('Authorization', '');
+        $header = $request->header('X-Authorization', '');
 
         if (!str_starts_with(strtolower($header), 'tma ')) {
             return response()->json([
