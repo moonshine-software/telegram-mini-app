@@ -1,4 +1,4 @@
-import { init, retrieveRawInitData, disableVerticalSwipes } from '@telegram-apps/sdk';
+import { init, retrieveRawInitData, swipeBehavior } from '@telegram-apps/sdk';
 import { isTMA } from '@telegram-apps/bridge';
 import axios from 'axios';
 
@@ -10,7 +10,8 @@ if (isTMA()) {
     const configDisableVerticalSwipesValue = Boolean(document.querySelector('meta[name="config-disable_vertical_swipes"]').getAttribute('content'));
     console.log('configDisableVerticalSwipesValue', configDisableVerticalSwipesValue);
     if (configDisableVerticalSwipesValue) {
-        disableVerticalSwipes();
+        swipeBehavior.disableVertical();
+        console.log(swipeBehavior.isVerticalEnabled);
     }
     axios.post(url, {}, {
         headers: {
